@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Control de Consumo de Combustible</title>
+</head>
+<body>
+
+    <!-- Sección de registro de consumo -->
+    <section id="form-section">
+        <h2>Registrar Consumo</h2>
+        <form id="fuelForm">
+            <label for="nombre">Nombre:</label>
+            <select id="nombre" required>
+                <option value="Sergio González Camacho">Sergio González Camacho</option>
+                <option value="Fernando Sánchez Moreno">Fernando Sánchez Moreno</option>
+                <option value="Luis Carlos García Reyna">Luis Carlos García Reyna</option>
+                <option value="José Donato Moreno Bustos">José Donato Moreno Bustos</option>
+            </select>
+
+            <label for="distancia">Distancia Recorrida (km):</label>
+            <input type="number" id="distancia" step="0.1" required>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" required>
+
+            <button type="submit">Registrar</button>
+        </form>
+        <p id="alerta-consumo" class="alerta"></p>
+    </section>
+
+    <!-- Sección de tabla -->
+    <section id="table-section">
+        <h2>Registro de Consumo</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Distancia (km)</th>
+                    <th>Fecha</th>
+                    <th>Consumo (L)</th>
+                </tr>
+            </thead>
+            <tbody id="registroTabla">
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Apartado para exportar comprobante -->
+    <section id="export-section">
+        <button id="exportBtn">Exporta tu comprobante</button>
+    </section>
+
+    <!-- Cita en formato APA 7ª edición -->
+    <footer>
+        <p>De acuerdo con información de KIA 2024, el consumo de un vehículo de 4 cilindros, motor 2.0 es de 9.3 km por litro en la ciudad.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
